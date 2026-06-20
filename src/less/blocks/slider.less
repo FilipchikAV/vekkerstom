@@ -1,0 +1,74 @@
+.slider-container {
+  width: 100%;
+  max-width: 1110px;
+  padding-top: 20px;
+  margin: 0 auto 20px;
+  border: 1px solid #009344;
+}
+
+/* Кинопроектор, где бежит кинолента слайдера */
+.slider {
+  border: 1px solid #009344;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  overflow: hidden;
+}
+
+/* Сама кинолента слайдера */
+.slider__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.8s ease-in-out;
+}
+/* Сами слайды-кадры из киноленты слайдера */
+.slider__item {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Здесь у нас само содержание каждого слайда-кадра */
+.slider__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+.slider__sublist {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+
+/* Блок с кнопками */
+.slider__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto 40px;
+}
+
+.slider__btn {
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 15%;
+  transition: background-color 0.2s ease;
+}
+
+.slider__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
