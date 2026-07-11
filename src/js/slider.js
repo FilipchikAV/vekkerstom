@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+	const slider = document.querySelector('.slider-container');
 	const list = document.querySelector('.slider__list');
-	const btnPrev = document.querySelector('.slider__btn-prev');
-	const btnNext = document.querySelector('.slider__btn-next');
-	const container = document.querySelector('.slider-container');
+	const btnPrev = document.querySelector('.slider__prev');
+	const btnNext = document.querySelector('.slider__next');
 
 	// Клонирование для бесконечного эффекта
 	const originalSlides = Array.from(list.children);
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		moveSlider(currentIndex + 1);
 	}, 3000);
 
-	list.addEventListener('mouseenter', () => clearInterval(autoTimer));
-	list.addEventListener('mouseleave', () => {
+	slider.addEventListener('mouseenter', () => clearInterval(autoTimer));
+	slider.addEventListener('mouseleave', () => {
 		autoTimer = setInterval(() => moveSlider(currentIndex + 1), 3000);
 	});
 });

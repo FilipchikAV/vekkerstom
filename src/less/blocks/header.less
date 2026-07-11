@@ -34,6 +34,7 @@
   color: #000000;
 }
 .header__nav {
+  position: relative;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -45,9 +46,38 @@
   margin-right: 40px;
 }
 .header__list {
+  width: 100%;
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  background: linear-gradient(180deg, #006738 0%, #009344 100%);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-100px); /* Смещено вверх */
+  pointer-events: none;
+}
+.header__list.animation {
+  transition: opacity 0.3s ease-out, transform 1.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.header__list.open {
+  opacity: 1;
+  transform: translateY(0); /* Возвращаем в исходную точку */
+  pointer-events: auto;
+}
+
+.header__item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.header__link {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
 }
 .header__link-img {
   display: block;
@@ -85,4 +115,10 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+.header__btn-svg {
+  transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.header__btn.open .header__btn-svg {
+  transform: rotate(-360deg); /* влево */
 }

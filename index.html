@@ -24,7 +24,7 @@
 			  <a href="#" class="header__link-logo">
 			    <img src="./src/img/icons/logo-min.png" alt="Логотип" class="header__link-img">
 			  </a>
-			  <ul class="header__list visually-hidden">
+			  <ul class="header__list">
 				  <li class="header__item">
 					  <a href="#" class="header__link">О клинике</a>
 				  </li>
@@ -57,7 +57,7 @@
 					</div>
         </div>
 			 <button class="header__btn">
-				 <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+				 <svg class="header__btn-svg" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
 					 <path d="M25 3.12467C25 2.49967 24.5833 2.08301 23.9583 2.08301H1.04167C0.416667 2.08301 0 2.49967 0 3.12467V5.20801C0 5.83301 0.416667 6.24967 1.04167 6.24967H23.9583C24.5833 6.24967 25 5.83301 25 5.20801V3.12467Z" fill="#009344"/>
 					 <path d="M25 11.4577C25 10.8327 24.5833 10.416 23.9583 10.416H1.04167C0.416667 10.416 0 10.8327 0 11.4577V13.541C0 14.166 0.416667 14.5827 1.04167 14.5827H23.9583C24.5833 14.5827 25 14.166 25 13.541V11.4577Z" fill="#009344"/>
 					 <path d="M25 19.7917C25 19.1667 24.7223 18.75 24.3056 18.75H9.02782C8.61115 18.75 8.33337 19.1667 8.33337 19.7917V21.875C8.33337 22.5 8.61115 22.9167 9.02782 22.9167H24.3056C24.7223 22.9167 25 22.5 25 21.875V19.7917Z" fill="#009344"/>
@@ -68,6 +68,7 @@
 	  
 	  <main class="main">
 		<section class="slider">
+			<div class="slider-container">
 			  <ul class="slider__list">
 				  <li class="slider__item">
 					  <h2 class="slider__title">
@@ -96,7 +97,152 @@
 						  </svg>
 					  </button>
 				  </div>
-				  <img src="./src/img/slider/slider-3@mobile.png" alt="Профессиональная чистка" class="slider__img">
+				  <img src="./src/img/slider/slider-1@mobile.png" alt="Профессиональная чистка" class="slider__img">
+				  </li>
+				  <li class="slider__item">
+					  <h2 class="slider__title">
+						  Полная профессиональная имплантация зубов
+					  </h2>
+					  <div class="slider__inner-wrap">
+						  <p class="slider__text">Верните уверенность в улыбке</p>
+						  <div class="slider__wrap">
+							  <p class="slider__price">35000</p>
+							  <p class="slider__currency">руб.</p>
+						  </div>
+						  <p class="slider__info">Консультация хирурга-имплантолога бесплатно</p>
+					  </div>
+					  <div class="slider__button-wrap">
+						  <button class="slider__btn-1">
+							  Записаться на прием
+							  <span class="slider__btn-1-wrap">
+							  <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+						    <path d="M7.25738 0L6.81195 0.487257L8.79411 2.65546H0V3.34456H8.79411L6.81195 5.51274L7.25738 6L10 2.99999L7.25738 0Z" fill="white"/>
+					      </svg>
+						  </span>
+						  </button>
+						  <button class="slider__btn-2">Подробнее
+							  <svg class="slider__btn-2-swg" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
+								  <path d="M9.27437 0L8.70514 0.446653L11.2382 2.43418H0V3.06584H11.2382L8.70514 5.05335L9.27437 5.5L12.7792 2.74999L9.27437 0Z" fill="#009344"/>
+							  </svg>
+						  </button>
+					  </div>
+					  <img src="./src/img/slider/slider-2@mobile.png" alt="Профессиональная чистка" class="slider__img">
+				  </li>
+				  <li class="slider__item">
+					  <h2 class="slider__title">
+						  Комплексная профессиональная гигиена полости рта
+					  </h2>
+					  <div class="slider__inner-wrap">
+						  <p class="slider__text">По удивительной цене</p>
+						  <div class="slider__wrap">
+							  <p class="slider__price">6500</p>
+							  <p class="slider__currency">руб.</p>
+						  </div>
+						  <p class="slider__info">С 4 ИЮНЯ ПО 31 АВГУСТА 2026 ГОДА</p>
+					  </div>
+					  <div class="slider__button-wrap">
+						  <button class="slider__btn-1">
+							  Записаться на прием
+							  <span class="slider__btn-1-wrap">
+							  <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+						    <path d="M7.25738 0L6.81195 0.487257L8.79411 2.65546H0V3.34456H8.79411L6.81195 5.51274L7.25738 6L10 2.99999L7.25738 0Z" fill="white"/>
+					      </svg>
+						  </span>
+						  </button>
+						  <button class="slider__btn-2">Подробнее
+							  <svg class="slider__btn-2-swg" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
+								  <path d="M9.27437 0L8.70514 0.446653L11.2382 2.43418H0V3.06584H11.2382L8.70514 5.05335L9.27437 5.5L12.7792 2.74999L9.27437 0Z" fill="#009344"/>
+							  </svg>
+						  </button>
+					  </div>
+					  <img src="./src/img/slider/slider-3@mobile.png" alt="Профессиональная чистка" class="slider__img">
+				  </li>
+				  <li class="slider__item">
+					  <h2 class="slider__title">
+						  Комплексная профессиональная гигиена полости рта
+					  </h2>
+					  <div class="slider__inner-wrap">
+						  <p class="slider__text">По удивительной цене</p>
+						  <div class="slider__wrap">
+							  <p class="slider__price">6500</p>
+							  <p class="slider__currency">руб.</p>
+						  </div>
+						  <p class="slider__info">С 4 ИЮНЯ ПО 31 АВГУСТА 2026 ГОДА</p>
+					  </div>
+					  <div class="slider__button-wrap">
+						  <button class="slider__btn-1">
+							  Записаться на прием
+							  <span class="slider__btn-1-wrap">
+							  <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+						    <path d="M7.25738 0L6.81195 0.487257L8.79411 2.65546H0V3.34456H8.79411L6.81195 5.51274L7.25738 6L10 2.99999L7.25738 0Z" fill="white"/>
+					      </svg>
+						  </span>
+						  </button>
+						  <button class="slider__btn-2">Подробнее
+							  <svg class="slider__btn-2-swg" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
+								  <path d="M9.27437 0L8.70514 0.446653L11.2382 2.43418H0V3.06584H11.2382L8.70514 5.05335L9.27437 5.5L12.7792 2.74999L9.27437 0Z" fill="#009344"/>
+							  </svg>
+						  </button>
+					  </div>
+					  <img src="./src/img/slider/slider-3@mobile.png" alt="Профессиональная чистка" class="slider__img">
+				  </li>
+				  <li class="slider__item">
+					  <h2 class="slider__title">
+						  Комплексная профессиональная гигиена полости рта
+					  </h2>
+					  <div class="slider__inner-wrap">
+						  <p class="slider__text">По удивительной цене</p>
+						  <div class="slider__wrap">
+							  <p class="slider__price">6500</p>
+							  <p class="slider__currency">руб.</p>
+						  </div>
+						  <p class="slider__info">С 4 ИЮНЯ ПО 31 АВГУСТА 2026 ГОДА</p>
+					  </div>
+					  <div class="slider__button-wrap">
+						  <button class="slider__btn-1">
+							  Записаться на прием
+							  <span class="slider__btn-1-wrap">
+							  <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+						    <path d="M7.25738 0L6.81195 0.487257L8.79411 2.65546H0V3.34456H8.79411L6.81195 5.51274L7.25738 6L10 2.99999L7.25738 0Z" fill="white"/>
+					      </svg>
+						  </span>
+						  </button>
+						  <button class="slider__btn-2">Подробнее
+							  <svg class="slider__btn-2-swg" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
+								  <path d="M9.27437 0L8.70514 0.446653L11.2382 2.43418H0V3.06584H11.2382L8.70514 5.05335L9.27437 5.5L12.7792 2.74999L9.27437 0Z" fill="#009344"/>
+							  </svg>
+						  </button>
+					  </div>
+					  <img src="./src/img/slider/slider-3@mobile.png" alt="Профессиональная чистка" class="slider__img">
+				  </li>
+				  <li class="slider__item">
+					  <h2 class="slider__title">
+						  Комплексная профессиональная гигиена полости рта
+					  </h2>
+					  <div class="slider__inner-wrap">
+						  <p class="slider__text">По удивительной цене</p>
+						  <div class="slider__wrap">
+							  <p class="slider__price">6500</p>
+							  <p class="slider__currency">руб.</p>
+						  </div>
+						  <p class="slider__info">С 4 ИЮНЯ ПО 31 АВГУСТА 2026 ГОДА</p>
+					  </div>
+					  <div class="slider__button-wrap">
+						  <button class="slider__btn-1">
+							  Записаться на прием
+							  <span class="slider__btn-1-wrap">
+							  <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+						    <path d="M7.25738 0L6.81195 0.487257L8.79411 2.65546H0V3.34456H8.79411L6.81195 5.51274L7.25738 6L10 2.99999L7.25738 0Z" fill="white"/>
+					      </svg>
+						  </span>
+						  </button>
+						  <button class="slider__btn-2">Подробнее
+							  <svg class="slider__btn-2-swg" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
+								  <path d="M9.27437 0L8.70514 0.446653L11.2382 2.43418H0V3.06584H11.2382L8.70514 5.05335L9.27437 5.5L12.7792 2.74999L9.27437 0Z" fill="#009344"/>
+							  </svg>
+						  </button>
+					  </div>
+					  <img src="./src/img/slider/slider-3@mobile.png" alt="Профессиональная чистка" class="slider__img">
 				  </li>
 			  </ul>
 			  <button class="slider__prev">
@@ -109,7 +255,8 @@
 					  <path d="M0.80957 0.80957C1.2224 0.396743 1.88107 0.39682 2.29395 0.80957L28.1221 26.6377C28.5229 27.0385 28.5231 27.7062 28.1143 28.1074L28.1104 28.1104L2.28223 53.9395L2.27637 53.9453C2.0797 54.1495 1.81121 54.252 1.5459 54.252C1.28924 54.2519 1.01456 54.1444 0.80957 53.9395C0.396798 53.5267 0.396983 52.868 0.80957 52.4551L25.5361 27.7275L25.8896 27.374L0.80957 2.29395C0.39682 1.88107 0.396743 1.2224 0.80957 0.80957Z" fill="#009344" fill-opacity="0.2" stroke="#019344"/>
 				  </svg>
 			  </button>
-		  </section>
+			</div>
+		</section>
 		  
 		  <!-- ********************** about ****************** -->
 		  
