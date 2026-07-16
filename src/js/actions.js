@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const slider = document.querySelector('.actions-container');
+	const slider = document.querySelector('.actions__container');
 	const list = document.querySelector('.actions__list');
 	const btnPrev = document.querySelector('.actions__prev');
 	const btnNext = document.querySelector('.actions__next');
@@ -47,13 +47,30 @@ document.addEventListener("DOMContentLoaded", () => {
 	btnNext.addEventListener('click', () => moveSlider(currentIndex + 1));
 	btnPrev.addEventListener('click', () => moveSlider(currentIndex - 1));
 
-	// Автопрокрутка
-	let autoTimer = setInterval(() => {
-		moveSlider(currentIndex + 1);
-	}, 3000);
+	// === Модернизированная автопрокрутка ===
+	let autoTimer = null;
 
-	slider.addEventListener('mouseenter', () => clearInterval(autoTimer));
-	slider.addEventListener('mouseleave', () => {
-		autoTimer = setInterval(() => moveSlider(currentIndex + 1), 3000);
-	});
+	// Вынесли запуск интервала в отдельную функцию, чтобы не дублировать код
+	function startAutoPlay() {
+		if (autoTimer) clearInterval(autoTimer); // Защита от двойных таймеров
+		autoTimer = setInterval(() => {
+			moveSlider(currentIndex + 1);
+		}, 3000);
+	}
+
+	function stopAutoPlay() {
+		clearInterval(autoTimer);
+	}
+
+	// Запускаем при старте
+	startAutoPlay();
+
+	// Управление мышкой (ПК)
+	slider.addEventListener('mouseenter', stopAutoPlay);
+	slider.addEventListener('mouseleave', startAutoPlay);
+
+	// Управление тапами (Смартфоны)
+	// passive: true улучшает производительность скролла на мобильных
+	slider.addEventListener('touchstart', stopAutoPlay, { passive: true });
+	slider.addEventListener('touchend', startAutoPlay);
 });
