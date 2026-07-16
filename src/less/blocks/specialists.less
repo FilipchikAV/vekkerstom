@@ -1,5 +1,6 @@
 .specialists {
-  padding: 0 8px;
+  position: relative;
+  padding: 0 18px;
   margin-bottom: 20px;
 }
 .specialists__title {
@@ -18,10 +19,19 @@
   text-align: center;
   color: #58595b;
 }
+.specialists__container {
+  overflow: hidden;
+}
 .specialists__list {
   list-style-type: none;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
 }
 .specialists__item {
+  width: 100%;
+  max-width: 284px;
+  flex: 0 0 100%;
   border-radius: 10px;
   border: 1px solid #cce9da;;
 }
@@ -67,4 +77,38 @@
   line-height: 100%;
   color: #ffffff;
   cursor: pointer;
+}
+.specialists__btn-prev{
+  position: absolute;
+  top: 66%;
+  left: 4px;
+  z-index: 1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  padding-right: 2px;
+  border-radius: 100%;
+  border: 1px solid #cce9da;
+  background: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.specialists__btn-next {
+  position: absolute;
+  top: 66%;
+  right: 4px;
+  z-index: 1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  padding-left: 2px;
+  border-radius: 100%;
+  border: 1px solid #cce9da;
+  background: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transform: translateY(-50%);
 }
