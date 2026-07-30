@@ -1,0 +1,74 @@
+/* 1. Модальное окно инфа про праздник расширенная. Исходное (закрытое) состояние окна */
+.modal {
+  margin: auto;
+  border: none;
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  /* Эффекты для анимации */
+  opacity: 0;
+  transform: scale(0.7); /* Окно уменьшено, пока закрыто */
+  
+  /* Стандартный transition, на который никто не ругается */
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Выносим новые свойства в отдельные современные директивы */
+  transition-property: opacity, transform, display, overlay;
+  transition-behavior: allow-discrete;
+}
+
+/* 2. Модальное окно инфа про праздник расширенная. Состояние окна, когда оно ОТКРЫТО */
+.modal[open] {
+  opacity: 1;
+  transform: scale(1);
+  
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+/* 3. Модальное окно инфа про праздник расширенная. Анимация заднего фона (backdrop) */
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  
+  /* Разделяем, чтобы редактор кода был спокоен */
+  transition: background-color 0.8s ease, backdrop-filter 0.8s ease;
+  transition-property: background-color, backdrop-filter, display, overlay;
+  transition-behavior: allow-discrete;
+}
+
+/* Задний фон, когда окно ОТКРЫТО */
+.modal[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  
+  @starting-style {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+  }
+}
+.modal__close-btn {
+  display: block;
+  padding: 10px 20px;
+  border: 1px solid #009344;
+  border-radius: 15px;
+  cursor: pointer;
+  background: none;
+}
+.modal__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.modal__subwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

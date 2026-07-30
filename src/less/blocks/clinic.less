@@ -1,0 +1,113 @@
+.clinic {
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+.clinic__title {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  color: #000000;
+  text-align: center;
+}
+.clinic__text {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.07;
+  text-align: center;
+  color: #58595b;
+}
+.clinic__slider {
+  position: relative;
+}
+.clinic__container {
+  overflow: hidden;
+}
+.clinic__list {
+  width: 100%;
+  max-width: 345px;
+  margin: 15px auto 5px;
+  display: flex;
+  list-style-type: none;
+}
+.clinic__item {
+  width: 100%;
+  max-width: 345px;
+  flex: 0 0 100%;
+}
+.clinic__img {
+  padding: 10px;
+  display: block;
+  width: 345px;
+  height: 230px;
+  border-radius: 20px;
+}
+.clinic__prev {
+  position: absolute;
+  top: 48%;
+  left: 2px;
+  z-index: 1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  padding-right: 2px;
+  border-radius: 100%;
+  border: 1px solid #cce9da;
+  background: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.clinic__next {
+  position: absolute;
+  top: 48%;
+  right: 2px;
+  z-index: 1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  padding-left: 2px;
+  border-radius: 100%;
+  border: 1px solid #cce9da;
+  background: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.clinic__dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #cce9da;
+  border-radius: 100%;
+  border: 1px solid #006738;
+}
+.clinic__dot--active {
+  background: #009344;
+}
+
+.clinic__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.clinic__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cce9da; /* Бледный цвет для неактивных */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Класс для текущего слайда */
+.clinic__dot.active {
+  background-color: #006738; /* Ваш фирменный зеленый */
+}

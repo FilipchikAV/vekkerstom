@@ -1,0 +1,160 @@
+.slider {
+  padding: 0 10px;
+  position: relative;
+  background: url("/src/img/icons/bkg-logo.png") no-repeat;
+  background-size: cover;
+  
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    z-index: 1;
+    height: 5px;
+    background: rgba(0, 147, 68, 0.2);
+  }
+}
+.slider-container {
+  overflow: hidden;
+}
+.slider__list {
+  width: 100%;
+  max-width: 355px;
+  margin: 15px auto 15px;
+  display: flex;
+  list-style-type: none;
+}
+.slider__item {
+  width: 100%;
+  max-width: 355px;
+  flex: 0 0 100%;
+}
+.slider__title {
+  padding: 0 5px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 0.75;
+  color: #58595b;
+  height: calc(24px * 0.75 * 3);
+}
+.slider__inner-wrap {
+  width: 220px;
+  margin: 0 auto;
+}
+.slider__text {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1;
+  color: #006738;
+  text-transform: uppercase;
+}
+.slider__wrap {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 5px;
+}
+.slider__price,
+.slider__currency {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(180deg, #006738 0%, #009344 100%);
+  background-clip: text;
+  color: transparent;
+}
+.slider__price {
+  font-size: 40px;
+  line-height: 0.8;
+}
+.slider__currency {
+  font-size: 10px;
+  line-height: 100%;
+}
+.slider__info {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1;
+  color: #58595b;
+  text-transform: uppercase;
+}
+.slider__btn-1 {
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 25px;
+  width: 170px;
+  border: none;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, #009344 0%, #017637 100%);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 100%;
+  color: #ffffff;
+  cursor: pointer;
+}
+.slider__button-wrap {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.slider__btn-1-wrap {
+  padding: 4px 0;
+  display: block;
+  border-radius: 100%;
+  background: #009344;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.slider__btn-2 {
+  padding: 12px 0;
+  width: 85px;
+  display: block;
+  border: none;
+  background: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #009344;
+  cursor: pointer;
+}
+.slider__btn-2-swg {
+  margin-left: 5px;
+}
+.slider__img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.slider__prev {
+  position: absolute;
+  top: 35%;
+  left: 8px;
+  z-index: 2;
+  display: block;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.slider__next {
+  position: absolute;
+  top: 35%;
+  right: 8px;
+  z-index: 2;
+  display: block;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

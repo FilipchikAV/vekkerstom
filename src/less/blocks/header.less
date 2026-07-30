@@ -1,0 +1,124 @@
+.header__subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f8f0;
+  padding: 8px;
+  border-bottom: 1px solid #ebebeb;
+  height: 40px;
+}
+.header__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+.header__icon {
+  display: block;
+}
+.header__address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 100%;
+  color: #000000;
+}
+.header__info {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 100%;
+  color: #009344;
+}
+.header__span {
+  color: #000000;
+}
+.header__nav {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+.header__link-logo {
+  display: block;
+  margin-right: 40px;
+}
+.header__list {
+  width: 100%;
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #006738 0%, #009344 100%);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-100px); /* Смещено вверх */
+  pointer-events: none;
+}
+.header__list.animation {
+  transition: opacity 0.3s ease-out, transform 1.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.header__list.open {
+  opacity: 1;
+  transform: translateY(0); /* Возвращаем в исходную точку */
+  pointer-events: auto;
+}
+
+.header__item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.header__link {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+.header__link-img {
+  display: block;
+  width: 75px;
+  height: 35px;
+}
+.header__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.header__phone {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1;
+}
+.header__phone-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.header__sub-span {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.1;
+  color: #a7a8a0;
+}
+.header__btn {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.header__btn-svg {
+  transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.header__btn.open .header__btn-svg {
+  transform: rotate(-360deg); /* влево */
+}
