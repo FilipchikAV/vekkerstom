@@ -5,8 +5,8 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vekkerstom</title>
-    <script type="module" crossorigin src="/vekkerstom/assets/index-D86MHm69.js"></script>
-    <link rel="stylesheet" crossorigin href="/vekkerstom/assets/index-tTfED-kA.css">
+    <script type="module" crossorigin src="/vekkerstom/assets/index-BpIhClfY.js"></script>
+    <link rel="stylesheet" crossorigin href="/vekkerstom/assets/index-BoHfCjIL.css">
   </head>
   <body class="body">
   <div class="container">
@@ -95,7 +95,7 @@
 					      </svg>
 						  </span>
 					  </button>
-					  <button class="slider__btn-2">Подробнее
+					  <button id="openModalBtn" class="slider__btn-2">Подробнее
 						  <svg class="slider__btn2swg" width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg">
 							  <path d="M9.27437 0L8.70514 0.446653L11.2382 2.43418H0V3.06584H11.2382L8.70514 5.05335L9.27437 5.5L12.7792 2.74999L9.27437 0Z" fill="#009344"/>
 						  </svg>
@@ -793,5 +793,72 @@
 		  </p>
 	  </footer>
   </div>
+  <!-- модальные окошки -->
+  <dialog id="oralHygiene" class="modal__dialog">
+	  <div class="modal__wrap">
+		  <h2 class="modal__title">Комплексная профессиональная гигиена полости рта</h2>
+		  <p class="modal__text"><span class="modal__span">Комплексная профессиональная гигиена полости рта</span> — это медицинская процедура у стоматолога по удалению твердого камня и мягкого налета. Она защищает от кариеса, укрепляет десны и убирает запах. Стандартный курс включает ультразвук, аппарат Air Flow, полировку и фторирование. Чистку делают каждые 6 месяцев.
+		  </p>
+		  <h3 class="modal__subtitle">
+			  Основные этапы
+		  </h3>
+		  <ul class="modal__list">
+			  <li class="modal__item">
+				  <p class="modal__info">
+					  <span class="modal__span">Ультразвук:</span> скалер разрушает твердый зубной камень над десной и под ней.
+				  </p>
+			  </li>
+			  <li class="modal__item">
+				  <p class="modal__info"><span class="modal__span">Air Flow:</span> струя воды, воздуха и мелкого порошка счищает темный налет.
+				  </p>
+			  </li>
+			  <li class="modal__item">
+				  <p class="modal__info"><span class="modal__span">Полировка:</span>  паста делает зубы гладкими, чтобы налет не лип снова.
+				  </p>
+			  </li>
+			  <li class="modal__item">
+				  <p class="modal__info"><span class="modal__span">Фторирование:</span>  Фторирование: врач покрывает зубы лаком для защиты эмали.
+				  </p>
+			  </li>
+		  </ul>
+		  <h3 class="modal__subtitle">Зачем это нужно</h3>
+		  <ul class="modal__list">
+			  <li class="modal__item">
+				  <p class="modal__info">
+					  Снижает риск воспаления десен (гингивита и пародонтита).
+				  </p>
+			  </li>
+			  <li class="modal__item">
+				  <p class="modal__info">
+					  Помогает найти ранний кариес, который не виден под налетом.
+				  </p>
+			  </li>
+			  <li class="modal__item">
+				  <p class="modal__info">
+					  Продлевает срок службы пломб, коронок и имплантов.
+				  </p>
+			  </li>
+		  </ul>
+		  <h3 class="modal__subtitle">Уход после процедуры</h3>
+		  <ul class="modal__list">
+			  <li class="modal__item">
+				  <p class="modal__info">
+					  Не ешьте и не пейте яркие продукты (чай, кофе, свеклу) 2–3 дня.
+				  </p>
+			  </li>
+			  <li class="modal__item">
+				  <p class="modal__info">
+					  Купите мягкую зубную щетку на первые дни.
+				  </p>
+			  </li>
+			  <li class="modal__item">
+				  <p class="modal__info">
+					  Избегайте очень горячей или холодной пищи из-за легкой чувствительности.
+				  </p>
+			  </li>
+		  </ul>
+		  <button id="closeModalBtn" class="modal__btn">Закрыть</button>
+	  </div>
+  </dialog>
   </body>
 </html>
