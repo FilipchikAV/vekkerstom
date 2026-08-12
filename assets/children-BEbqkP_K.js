@@ -1,0 +1,1 @@
+var e=document.getElementById(`childrenStoma`),t=document.getElementById(`openChildrenStomaBtn`),n=document.getElementById(`closeChildrenStomaBtn`);t.addEventListener(`click`,()=>{e.showModal()}),n.addEventListener(`click`,()=>{e.close()}),e.addEventListener(`click`,t=>{t.target===e&&e.close()});

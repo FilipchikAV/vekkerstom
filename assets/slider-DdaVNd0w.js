@@ -1,0 +1,1 @@
+import{t as e}from"./slider-CMMcFkaw.js";export{e as initSlider};

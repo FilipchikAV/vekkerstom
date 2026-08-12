@@ -1,0 +1,1 @@
+import{t as e}from"./menu-DrOdhlvo.js";export{e as initMenu};

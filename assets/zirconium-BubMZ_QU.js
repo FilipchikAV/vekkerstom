@@ -1,0 +1,1 @@
+var e=document.getElementById(`zirconium`),t=document.getElementById(`openZirconiumBtn`),n=document.getElementById(`closeZirconiumBtn`);t.addEventListener(`click`,()=>{e.showModal()}),n.addEventListener(`click`,()=>{e.close()}),e.addEventListener(`click`,t=>{t.target===e&&e.close()});
