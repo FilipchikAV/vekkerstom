@@ -1,74 +1,83 @@
-/* 1. Модальное окно инфа про праздник расширенная. Исходное (закрытое) состояние окна */
-.modal {
-  margin: auto;
-  border: none;
-  border-radius: 12px;
-  padding: 30px;
+/* Стилизация фона за окном */
+.modal__dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px); /* Размытие заднего плана */
+}
+
+.modal__dialog {
   width: 100%;
-  max-width: 700px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  
-  /* Эффекты для анимации */
-  opacity: 0;
-  transform: scale(0.7); /* Окно уменьшено, пока закрыто */
-  
-  /* Стандартный transition, на который никто не ругается */
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-  
-  /* Выносим новые свойства в отдельные современные директивы */
-  transition-property: opacity, transform, display, overlay;
-  transition-behavior: allow-discrete;
+  max-width: 360px;
+  margin: 20px auto;
+  border: none;
+  background: transparent;
+  position: fixed;
+  top: 0;
 }
 
-/* 2. Модальное окно инфа про праздник расширенная. Состояние окна, когда оно ОТКРЫТО */
-.modal[open] {
-  opacity: 1;
-  transform: scale(1);
-  
-  @starting-style {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-}
-
-/* 3. Модальное окно инфа про праздник расширенная. Анимация заднего фона (backdrop) */
-.modal::backdrop {
-  background-color: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(0px);
-  
-  /* Разделяем, чтобы редактор кода был спокоен */
-  transition: background-color 0.8s ease, backdrop-filter 0.8s ease;
-  transition-property: background-color, backdrop-filter, display, overlay;
-  transition-behavior: allow-discrete;
-}
-
-/* Задний фон, когда окно ОТКРЫТО */
-.modal[open]::backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  
-  @starting-style {
-    background-color: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(0px);
-  }
-}
-.modal__close-btn {
-  display: block;
-  padding: 10px 20px;
-  border: 1px solid #009344;
-  border-radius: 15px;
-  cursor: pointer;
-  background: none;
-}
 .modal__wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  background: #f0f8f0;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-height: 85vh;
+  overflow-y: auto;
 }
-.modal__subwrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+.modal__title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.07;
+  color: #000000;
+}
+.modal__subtitle {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.07;
+  color: #009344;
+}
+.modal__text {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #58595b;
+}
+.modal__info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #58595b;
+}
+.modal__span {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.07;
+  text-align: center;
+  color: #58595b;
+}
+.modal__list {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.modal__btn {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  background: none;
+  cursor: pointer;
+  border: 1px solid #009344;
+  border-radius: 20px;
+}
+
+/* Блокировка скролла страницы при открытом окне */
+body:has(dialog[open]) {
+  overflow: hidden;
 }

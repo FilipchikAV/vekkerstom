@@ -1,12 +1,15 @@
-const btn = document.querySelector('.header__btn');
-const menu = document.querySelector('.header__list');
+export function initMenu() {
+	const btn = document.querySelector('.header__btn');
 
-window.addEventListener('load', () => {
-	menu.classList.add('animation');
-});
+	const menu = document.querySelector('.header__list');
 
-btn.addEventListener('click', (e) => {
-	e.stopPropagation();
-	menu.classList.toggle('open');
-	btn.classList.toggle('open');
-});
+	window.addEventListener('load', () => {
+		menu.classList.add('animation');
+	});
+
+	btn.addEventListener('click', (e) => {
+		e.stopPropagation();
+		menu.classList.toggle('open');
+		btn.classList.toggle('open');
+	});
+}
