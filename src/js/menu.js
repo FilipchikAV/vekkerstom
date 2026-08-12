@@ -1,11 +1,12 @@
 export function initMenu() {
 	const btn = document.querySelector('.header__btn');
-
 	const menu = document.querySelector('.header__list');
 
-	window.addEventListener('load', () => {
-		menu.classList.add('animation');
-	});
+	// Если кнопки или меню нет на этой странице, просто выходим, чтобы не было ошибок
+	if (!btn || !menu) return;
+
+	// Добавляем анимацию сразу, без ожидания window.load
+	menu.classList.add('animation');
 
 	btn.addEventListener('click', (e) => {
 		e.stopPropagation();
