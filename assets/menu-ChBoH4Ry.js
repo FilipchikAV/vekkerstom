@@ -1,0 +1,1 @@
+import{t as e}from"./menu-CljZZ8Wq.js";export{e as initMenu};

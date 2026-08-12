@@ -1,1 +1,0 @@
-function e(){let e=document.querySelector(`.header__btn`),t=document.querySelector(`.header__list`);window.addEventListener(`load`,()=>{t.classList.add(`animation`)}),e.addEventListener(`click`,n=>{n.stopPropagation(),t.classList.toggle(`open`),e.classList.toggle(`open`)})}export{e as t};
