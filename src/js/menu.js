@@ -2,11 +2,21 @@ export function initMenu() {
 	const btn = document.querySelector('.header__btn');
 	const menu = document.querySelector('.header__list');
 
-	// Если кнопки или меню нет на этой странице, просто выходим, чтобы не было ошибок
+	// Безопасность: если на странице нет меню, просто выходим
 	if (!btn || !menu) return;
 
-	// Добавляем анимацию сразу, без ожидания window.load
-	menu.classList.add('animation');
+	// Возвращаем вашу родную логику, но меняем 'load' на проверочную функцию
+	function enableAnimation() {
+		menu.classList.add('animation');
+	}
+
+	// Если страница УЖЕ загрузилась (как часто бывает в Vite с новыми страницами),
+	// то сразу включаем анимацию. Если ещё загружается — ждем load.
+	if (document.readyState === 'complete') {
+		enableAnimation();
+	} else {
+		window.addEventListener('load', enableAnimation);
+	}
 
 	btn.addEventListener('click', (e) => {
 		e.stopPropagation();

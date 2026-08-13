@@ -9,9 +9,9 @@ export default defineConfig({
 				// Главная страница
 				main: resolve(__dirname, 'index.html'),
 				// Страница для взрослых
-				adult: resolve(__dirname, 'AdultArea.html'),
+				adult: resolve(__dirname, 'mature.html'),
 				// Детская страница
-				children: resolve(__dirname, 'ChildrenArea.html'),
+				children: resolve(__dirname, 'children.html'),
 			},
 		},
 	},
