@@ -1,1 +1,0 @@
-var e=document.getElementById(`bite`),t=document.getElementById(`openBiteBtn`),n=document.getElementById(`closeBiteBtn`);t.addEventListener(`click`,()=>{e.showModal()}),n.addEventListener(`click`,()=>{e.close()}),e.addEventListener(`click`,t=>{t.target===e&&e.close()});

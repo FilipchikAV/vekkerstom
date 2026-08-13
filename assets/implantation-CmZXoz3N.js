@@ -1,1 +1,0 @@
-var e=document.getElementById(`implantation`),t=document.getElementById(`openImplantationBtn`),n=document.getElementById(`closeImplantationBtn`);t.addEventListener(`click`,()=>{e.showModal()}),n.addEventListener(`click`,()=>{e.close()}),e.addEventListener(`click`,t=>{t.target===e&&e.close()});

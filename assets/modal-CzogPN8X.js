@@ -1,1 +1,0 @@
-function e(){let e=document.getElementById(`oralHygiene`),t=document.getElementById(`openOralHygieneBtn`),n=document.getElementById(`oralHygieneBtn`);t.addEventListener(`click`,()=>{e.showModal()}),n.addEventListener(`click`,()=>{e.close()}),e.addEventListener(`click`,t=>{t.target===e&&e.close()})}export{e as t};

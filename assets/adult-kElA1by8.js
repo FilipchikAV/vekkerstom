@@ -1,0 +1,1 @@
+import{t as e}from"./menu-QKAxpOYa.js";e();
