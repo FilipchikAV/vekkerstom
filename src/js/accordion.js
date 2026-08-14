@@ -6,6 +6,12 @@ export function initAccordion() {
 			const btn = item.querySelector('.mature__btn');
 			const content = item.querySelector('.mature__wrap');
 
+			// ↓↓↓ Вот эти строки нужно добавить ↓↓↓
+			content.style.overflow = 'hidden';
+			content.style.transition = 'max-height 1s ease'; // скорость анимации
+			content.style.maxHeight = null;                   // изначально закрыто
+			// ↑↑↑ --------------------------------- ↑↑↑
+
 			// Начальное состояние — закрыто
 			btn.setAttribute('aria-expanded', 'false');
 
@@ -19,7 +25,7 @@ export function initAccordion() {
 						const otherContent = otherItem.querySelector('.mature__wrap');
 
 						otherBtn.setAttribute('aria-expanded', 'false');
-						otherContent.style.maxHeight = null; // возвращаем к CSS (0)
+						otherContent.style.maxHeight = null;
 					}
 				});
 
